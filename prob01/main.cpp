@@ -8,15 +8,15 @@ int main()
   // then print both the char and the short
 
   char my_char1 = 'J';
-  short my_short1 = ;
-  std::cout << "The ASCII value for " << my_char1 << " is " << my_short1 << std::endl;
+  short my_short1 = static_cast<short>(my_char1);
+  std::cout << "The ASCII value for " << my_short1 << " is " << my_short1 << std::endl;
 
   std::cout << std::endl; // blank line to separate output from the different exercises
 
   // TODO#2: add one to the character to see what gets printed out
 
   char my_char2 = 'C';
-  my_char2 = ;
+  my_char2 = my_char2 + 1 ;
   std::cout << "Char1: " << my_char2 << std::endl;
 
   std::cout << std::endl; // blank line to separate output from the different exercises
@@ -26,9 +26,9 @@ int main()
   // longer alphabetic
 
   char my_char3 = 'z';
-  my_char3 = ;
+  my_char3 = my_char3 + 1;
   std::cout << "Char2: " << my_char3 << std::endl;
-
+  // the value of the character isnt alphabetic because it no longer correspionds to that character
   std::cout << std::endl; // blank line to separate output from the different exercises
 
   // TODO#4: print each number, then add one to each number and print it again
@@ -42,16 +42,16 @@ int main()
 
   std::cout << "Short (" << sizeof(my_short2) << " bytes): "
     << std::dec << my_short2 << std::hex << " (0x" << my_short2 << ')';
-  my_short2 = ;
+  my_short2 = my_short2 + 1;
   std::cout << ", after adding 1: " << std::dec << my_short2
     << std::hex << " (0x" << my_short2 << ")\n";
-
+    // the reason my short became negative is because it overflowed and went back to lowest possible value
   std::cout << "Int (" << sizeof(my_short2) << " bytes): "
     << std::dec << my_int2 << std::hex << " (0x" << my_int2 << ')';
-  my_int2 = ;
+  my_int2 = my_int2 + 1 ;
   std::cout << ", after adding 1: " << std::dec << my_int2
     << std::hex << " (0x" << my_int2 << ")\n";
-
+    // int did not change into a negative because the data type can hold more more digits
   std::cout << std::endl; // blank line to separate output from the different exercises
 
   // TODO#5: print each number, then add one to each number and print it again
@@ -63,16 +63,16 @@ int main()
 
   std::cout << "Unsigned short (" << sizeof(my_short3) << " bytes): "
     << std::dec << my_short3 << std::hex << " (0x" << my_short3 << ')';
-  my_short3 = ;
+  my_short3 = my_short3 +1 ;
   std::cout << ", after adding 1: " << std::dec << my_short3
     << std::hex << " (0x" << my_short3 << ")\n";
-
+    // the reason my short became negative is because it overflowed and went back to lowest possible value
   std::cout << "Same value as int (" << sizeof(my_int3) << " bytes): "
     << std::dec << my_int3 << std::hex << " (0x" << my_int3 << ')';
-  my_int3 = ;
+  my_int3 = my_int3 + 1;
   std::cout << ", after adding 1: " << std::dec << my_int3
     << std::hex << " (0x" << my_int3 << ")\n";
-
+    // int did not change into a negative because the data type can hold more more digits
   // ** not required, but for more practice, feel free to add code below which **
   // ** tests underflow and overflow using other data types **
 
