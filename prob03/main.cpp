@@ -5,7 +5,7 @@
 int main()
 {
  // Last year's sales
- double last_year = 2103419277;
+ unsigned last_year = 2103419277;
 
  // Display last year's Sales
 
@@ -17,7 +17,7 @@ int main()
 
  // calculate this years projected sales and make a variable for it
 
- double this_year = (last_year * INCREASE) + last_year;
+ unsigned this_year = (last_year * INCREASE) + last_year;
 
  // dislay next this years projected Sales
 
